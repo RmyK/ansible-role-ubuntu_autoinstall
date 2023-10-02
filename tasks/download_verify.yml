@@ -1,7 +1,7 @@
 ---
 - name: Download the SHA256 sums
   get_url:
-    url: "https://cdimage.ubuntu.com/ubuntu-server/focal/daily-live/current/SHA256SUMS"
+    url: "https://cdimage.ubuntu.com/ubuntu-server/jammy/daily-live/current/SHA256SUMS"
     dest: "{{ target_dir }}"
 
 - name: Get the SHA256 sum for the {{ iso_arch }} ISO
@@ -12,13 +12,13 @@
 
 - name: Download the latest Ubuntu Server 20.04 {{ iso_arch }} ISO
   get_url:
-    url: "https://cdimage.ubuntu.com/ubuntu-server/focal/daily-live/current/focal-live-server-{{ iso_arch }}.iso"
-    dest: "{{ target_dir }}/focal-live-server-{{ iso_arch }}.iso"
+    url: "https://cdimage.ubuntu.com/ubuntu-server/jammy/daily-live/current/jammy-live-server-{{ iso_arch }}.iso"
+    dest: "{{ target_dir }}/jammy-live-server-{{ iso_arch }}.iso"
     checksum: "sha256:{{ sha256sum.stdout }}"
 
 - name: Download the GPG keys
   get_url:
-    url: "https://cdimage.ubuntu.com/ubuntu-server/focal/daily-live/current/SHA256SUMS.gpg"
+    url: "https://cdimage.ubuntu.com/ubuntu-server/jammy/daily-live/current/SHA256SUMS.gpg"
     dest: "{{ target_dir }}"
 
 - name: Check if dirmngr is running
