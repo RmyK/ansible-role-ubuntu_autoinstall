@@ -6,7 +6,7 @@
 
 - name: Extract the ISO
   shell:
-    cmd: "xorriso -osirrox on -indev {{ target_dir }}/focal-live-server-{{ iso_arch }}.iso -extract / {{ target_dir }}/iso"
+    cmd: "xorriso -osirrox on -indev {{ target_dir }}/jammy-live-server-{{ iso_arch }}.iso -extract / {{ target_dir }}/iso"
 
 - name: Fix extracted ISO mode
   file:
