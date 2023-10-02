@@ -5,9 +5,9 @@ iso_arch: "amd64"
 # Valid values are: amd64, arm64
 # ppc64el and s390x haven't been tested yet
 
-keyboard_layout: "us"
+keyboard_layout: "fr"
 
-hostname: "focal-autoinstall"
+hostname: "jammy-autoinstall"
 
 password: "ubuntu"
 
@@ -15,7 +15,7 @@ username: "ubuntu"
 
 ssh_public_key: ""
 
-pikvm_address: "pikvm.box"
+pikvm_address: "pikvm"
 
 pikvm_username: "admin"
 
